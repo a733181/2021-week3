@@ -164,9 +164,7 @@ body {
     .row {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center;
-      margin-right: 0;
-      margin-left: 0; } }
+              justify-content: center; } }
 
 @media (min-width: 0px) {
   .col-md-1 {
@@ -976,7 +974,7 @@ body {
     @media (max-width: 768px) {
       .region select {
         font-size: 14px;
-        padding: 7px 204px 9px 16px; } }
+        padding: 7px 120px 9px 16px; } }
 
 .card {
   border: 1px solid #00000020;
