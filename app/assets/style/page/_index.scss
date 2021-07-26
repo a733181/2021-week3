@@ -1,0 +1,316 @@
+.banner {
+    background: url(../images/banner.png) no-repeat center center/cover;
+    height: 637px;
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        color: $color-coffee;
+        font-size: 36px;
+        @include lg {
+            font-size: 20px;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        &--title {
+            font-weight: bold;
+            font-size: 64px;
+            @include lg {
+                font-size: 48px;
+            }
+            @include md {
+                font-size: 32px;
+            }
+        }
+    }
+}
+.about {
+    background-color: $color-pink;
+    @include px(60px, 80px);
+    text-align: center;
+    @include lg {
+        @include px(40px, 56px);
+    }
+    &--title {
+        @include title($color-coffee);
+        margin-bottom: 48px;
+        @include lg {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        @include md {
+            font-size: 24px;
+            margin-bottom: 28px;
+        }
+    }
+    & img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 25px;
+    }
+    &__item {
+        @include lg {
+            margin-bottom: 40px;
+        }
+    }
+    &__item--title {
+        color: $color-coffee;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    &__item--content {
+        text-align: left;
+        max-width: 255px;
+        @include my(auto, auto);
+    }
+}
+.classic {
+    @include mx(60px, 48px);
+    @include lg {
+        margin-top: 40px;
+    }
+    @include md {
+        @include mx(32px, 32px);
+    }
+    &--title {
+        margin-bottom: 40px;
+        @include title($color-coffee);
+        text-align: center;
+        @include lg {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+        @include md {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__item {
+        align-items: center;
+        margin-bottom: 32px;
+        @include lg {
+            margin-bottom: 8px;
+        }
+        @include md {
+            position: relative;
+        }
+        &:nth-of-type(2) {
+            flex-direction: row-reverse;
+            @include lg {
+                flex-direction: row;
+            }
+        }
+        &--img {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 17px;
+                right: 0;
+                background: url(../images/product-2-color.png) no-repeat;
+                background-size: contain;
+                opacity: 0;
+            }
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+        & p {
+            font-style: italic;
+            @include title($color-primary);
+            @include lg {
+                font-size: 28px;
+            }
+        }
+    }
+    &__item--content {
+        display: flex;
+        align-items: center;
+        @include md {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        & img {
+            margin-right: 10px;
+            width: 44px;
+        }
+        &--optical {
+            filter: invert(12%) sepia(62%) saturate(4329%) hue-rotate(7deg) brightness(115%) contrast(127%);
+        }
+    }
+}
+.designer {
+    background: url(../images/bg.png) no-repeat center center/cover;
+    @include px(60px, 80px);
+    @include lg {
+        @include px(40px, 56px);
+    }
+    @include md {
+        @include px(32px, 24px);
+    }
+    &--title {
+        margin-bottom: 40px;
+        text-align: center;
+        @include title($color-white);
+        @include lg {
+            font-size: 32px;
+        }
+    }
+    &__item {
+        position: relative;
+        @include md {
+            margin-bottom: 16px;
+        }
+        & img {
+            width: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.5);
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+        &:hover::before {
+            opacity: 0;
+        }
+    }
+    &__item--title {
+        font-size: 72px;
+        color: $color-primary;
+        font-weight: bold;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include lg {
+            font-size: 32px;
+        }
+    }
+}
+.recommend {
+    margin-bottom: 80px;
+    &--title {
+        @include title($color-coffee);
+        @include mx(60px, 40px);
+        text-align: center;
+        @include lg {
+            font-size: 32px;
+            @include mx(40px, 32px);
+        }
+        @include md {
+            font-size: 20px;
+            @include mx(32px, 20px);
+        }
+    }
+    &__item {
+        border: 1px solid #dee2e6;
+        box-shadow: 0px 2px 6px #00000029;
+        @include lg {
+            margin-bottom: 32px;
+        }
+        @include md {
+            margin-bottom: 16px;
+        }
+        & img {
+            width: 100%;
+        }
+        & p {
+            @include my(16px, 16px);
+            &:nth-of-type(1) {
+                margin-top: 16px;
+            }
+            &:nth-of-type(2) {
+                margin-top: 8px;
+            }
+        }
+        &--content {
+            @include mx(76px, 16px);
+        }
+        &--date {
+            @include mx(52px, 16px);
+        }
+    }
+}
+.contactUs {
+    background: $color-pink;
+    @include px(60px, 80px);
+    @include lg {
+        @include px(40px, 66px);
+    }
+    &--title {
+        text-align: center;
+        @include title($color-black);
+        padding-bottom: 24px;
+        @include lg {
+            font-size: 32px;
+        }
+    }
+    &--content {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+}
+.contactUs__form {
+    @include md {
+        font-size: 14px;
+    }
+}
+.contactUs__form__group {
+    margin-bottom: 16px;
+    & input,
+    textarea {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #000000;
+        padding: 1rem;
+        outline: 0;
+    }
+    &__checkbox {
+        display: flex;
+        margin-bottom: 40px;
+        & input {
+            margin-right: 8px;
+        }
+    }
+    &__submit {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        & input {
+            color: $color-white;
+            background-color: $color-primary;
+            width: 350px;
+            font-weight: bold;
+            padding: 16px 143px;
+            border: none;
+            transition-duration: 1000ms;
+            @include lg {
+                padding: 10px 77px;
+            }
+            @include md {
+                padding: 8px 54px;
+            }
+            &:hover {
+                background-color: $color-orange;
+            }
+        }
+    }
+}

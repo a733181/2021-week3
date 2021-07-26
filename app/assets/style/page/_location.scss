@@ -1,0 +1,133 @@
+.location--title {
+    border-left: 8px solid $color-crimson;
+    padding-left: 16px;
+    @include title($color-black);
+    @include mx(96px, 60px);
+    @include lg {
+        @include mx(60px, 40px);
+    }
+    @include md {
+        font-size: 28px;
+        @include mx(28px, 24px);
+    }
+}
+.region {
+    display: flex;
+    margin-bottom: 32px;
+    @include lg {
+        margin-bottom: 24px;
+    }
+    @include md {
+        margin-bottom: 20px;
+    }
+    & p {
+        font-size: 24px;
+        @include lg {
+            font-size: 16px;
+        }
+        @include md {
+            font-size: 14px;
+        }
+    }
+    & select {
+        font-size: 18px;
+        margin-left: 20px;
+        color: #495057;
+        @include lg {
+            font-size: 16px;
+        }
+        @include md {
+            font-size: 14px;
+        }
+    }
+}
+.card {
+    border: 1px solid $color-darkGray;
+    margin-bottom: 32px;
+    @include lg {
+        margin-bottom: 20px;
+    }
+    @include md {
+        margin-bottom: 16px;
+    }
+    & img {
+        width: 100%;
+        height: 224px;
+        @include lg {
+            height: 164px;
+        }
+    }
+    &__item {
+        margin: 0 24px;
+        &--name {
+            font-size: 24px;
+            @include px(12px, 12px);
+            @include lg {
+                font-size: 16px;
+                @include px(8px, 8px);
+            }
+        }
+        &--hr {
+            border-bottom: 1px solid $color-darkGray;
+            @include my(-24px, -24px);
+        }
+        &--phone,
+        &--time,
+        &--adress {
+            font-size: 20px;
+            margin-bottom: 8px;
+            @include lg {
+                font-size: 14px;
+            }
+        }
+        &--phone {
+            padding-top: 16px;
+            &::before {
+                content: "";
+                background: url("../images/icon-phone-black.svg") no-repeat center center/contain;
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+        &--time {
+            &::before {
+                content: "";
+                background: url("../images/icon-clock-black.svg") no-repeat center center/contain;
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+        &--adress {
+            margin-bottom: 16px;
+            &::before {
+                content: "";
+                background: url("../images/icon-map.svg") no-repeat center center/contain;
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+        &--content {
+            display: block;
+            background-color: $color-black;
+            text-align: center;
+            @include px(20px, 20px);
+            font-size: 19px;
+            color: #fff;
+            @include lg {
+                font-size: 14px;
+            }
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+}
