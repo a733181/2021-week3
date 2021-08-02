@@ -1,0 +1,29 @@
+.faq {
+  margin-bottom: 160px;
+  @include md {
+    margin-bottom: 56px;
+  }
+  &--title {
+    font-size: 32px;
+    margin-bottom: 36px;
+  }
+  &__item {
+    margin-bottom: 32px;
+    @include lg {
+      margin-bottom: 20px;
+    }
+    &--title {
+      font-size: 20px;
+      margin-bottom: 16px;
+      @include md {
+        margin-bottom: 8px;
+      }
+    }
+    &--content {
+      margin-left: 45px;
+      @include md {
+        margin-left: 0;
+      }
+    }
+  }
+}

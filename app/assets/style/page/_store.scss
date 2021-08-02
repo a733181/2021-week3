@@ -1,0 +1,161 @@
+// 門市據點全頁
+.region {
+  margin-bottom: 32px;
+  @include lg {
+    margin-bottom: 24px;
+  }
+  @include md {
+    margin-bottom: 20px;
+  }
+  & p {
+    font-size: 24px;
+    @include lg {
+      font-size: 16px;
+    }
+    @include md {
+      font-size: 14px;
+    }
+  }
+  & select {
+    font-size: 18px;
+    margin-left: 20px;
+    color: #495057;
+    padding: 9px 231px 8px 19px;
+    @include lg {
+      font-size: 16px;
+      padding: 10px 150px 12px 16px;
+    }
+    @include md {
+      font-size: 14px;
+      padding: 7px 100px 9px 16px;
+    }
+  }
+}
+//門市列表
+.store {
+  margin-bottom: 32px;
+  // border: 1px solid $color-darkGray;
+  @include lg {
+    margin-bottom: 20px;
+  }
+  @include md {
+    margin-bottom: 16px;
+  }
+  & img {
+    width: 100%;
+    height: 224px;
+    @include lg {
+      height: 164px;
+    }
+    @include md {
+      height: auto;
+    }
+  }
+  &__item {
+    padding: 0 24px;
+    border: 1px solid $color-darkGray;
+    &--name {
+      font-size: 24px;
+      @include px(12px, 12px);
+      @include lg {
+        font-size: 16px;
+        @include px(8px, 8px);
+      }
+    }
+    &--hr {
+      border-bottom: 1px solid $color-darkGray;
+      @include my(-24px, -24px);
+    }
+    &--phone,
+    &--time,
+    &--adress {
+      font-size: 20px;
+      margin-bottom: 8px;
+      @include lg {
+        font-size: 14px;
+      }
+    }
+    &--phone {
+      padding-top: 16px;
+      &::before {
+        content: "";
+        background: url("../images/icon-phone-black.svg") no-repeat center
+          center/contain;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &--time {
+      &::before {
+        content: "";
+        background: url("../images/icon-clock-black.svg") no-repeat center
+          center/contain;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &--adress {
+      margin-bottom: 16px;
+      &::before {
+        content: "";
+        background: url("../images/icon-map.svg") no-repeat center
+          center/contain;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &--content {
+      background-color: $color-black;
+      @include px(20px, 20px);
+      font-size: 19px;
+      @include lg {
+        font-size: 14px;
+      }
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}
+// 門市據點 內頁
+.location__store {
+  @include lg {
+    display: flex;
+    margin-bottom: 32px;
+    img {
+      width: 49.5%;
+      margin-right: 30px;
+    }
+    &__item {
+      width: 49.5%;
+    }
+  }
+  @include md {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    img {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+}
+.map {
+  width: 100%;
+  height: 422px;
+  border: 0;
+  @include md {
+    height: 221px;
+  }
+}

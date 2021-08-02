@@ -1,0 +1,133 @@
+.glassNav {
+  &--selected {
+    border-bottom: 8px solid $color-primary;
+  }
+  &__item {
+    width: 370px;
+    border-right: 1px solid $color-brightGray;
+    border-left: 1px solid $color-brightGray;
+    color: $color-black;
+    font-size: 32px;
+    &:hover {
+      filter: invert(71%) sepia(28%) saturate(6084%) hue-rotate(2deg)
+        brightness(106%) contrast(103%);
+    }
+    @include px(26px, 34px);
+    margin-bottom: -8px;
+    @media (max-width: 1120px) {
+      width: 300px;
+    }
+    @include lg {
+      width: 230px;
+      font-size: 24px;
+      @include px(14px, 22px);
+    }
+    @include md {
+      width: 115px;
+      font-size: 14px;
+      @include px(6px, 14px);
+    }
+    @media (max-width: 320px) {
+      width: 100px;
+      font-size: 12px;
+    }
+  }
+  &__item--img {
+    max-height: 40px;
+    margin-right: 10px;
+    @include lg {
+      height: 32px;
+    }
+    @include md {
+      height: 20px;
+      margin-right: 2px;
+    }
+  }
+}
+.glassBanner {
+  &--img {
+    width: 50%;
+  }
+}
+.glassContent {
+  &--mainTitle {
+    font-size: 42px;
+    @include lg {
+      font-size: 32px;
+    }
+    @include md {
+      font-size: 20px;
+    }
+  }
+  &--subTitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+    @include lg {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    @include md {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.glassCard {
+  &__body {
+    margin-bottom: 104px;
+    @include lg {
+      margin-bottom: 72px;
+    }
+    @include md {
+      margin-bottom: 32px;
+    }
+    &--img {
+      // 一般眼鏡
+      width: 100%;
+      height: 164px;
+      @include lg {
+        height: 215px;
+      }
+      @include md {
+        height: auto;
+      }
+    }
+    &--sunglassesImg {
+      // 太陽眼鏡
+      height: 224px;
+      width: 100%;
+      @include md {
+        height: auto;
+      }
+    }
+  }
+  &__body__item {
+    font-size: 24px;
+    text-transform: uppercase;
+    @include md {
+      font-size: 16px;
+    }
+    &--content {
+      color: $color-primary;
+    }
+  }
+  &__body__item__color--darkBrown,
+  &__body__item__color--brown {
+    width: 24px;
+    height: 24px;
+    @include md {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__body__item__color--darkBrown {
+    background-color: $color-darkBrown;
+    margin-right: 8px;
+    @include md {
+      margin-right: 4px;
+    }
+  }
+  &__body__item__color--brown {
+    background-color: $color-brown;
+  }
+}

@@ -1,0 +1,125 @@
+.footer {
+  background-color: $color-primary;
+  color: $color-white;
+  @include px(44px, 39px);
+  @include lg {
+    @include px(38px, 21px);
+  }
+  @include md {
+    @include px(25px, 24px);
+  }
+  & a:hover {
+    color: $color-hover;
+  }
+  &--hr {
+    border-bottom: 1px solid $color-white;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    @include lg {
+      margin-bottom: 24px;
+    }
+    @include md {
+      @include mx(18px, 16px);
+    }
+  }
+}
+//menu
+.footer__nav__menu {
+  @include md {
+    display: none;
+  }
+  & li {
+    margin-right: 48px;
+    margin-bottom: 36px;
+    @include lg {
+      margin-right: 40px;
+      margin-bottom: 18px;
+    }
+  }
+}
+// email and phone
+.footer__nav__connection {
+  font-size: 36px;
+  @include lg {
+    font-size: 20px;
+  }
+  &__item {
+    margin-bottom: 16px;
+    @include lg {
+      margin-bottom: 12px;
+    }
+    @include lg {
+      margin-bottom: 6px;
+    }
+  }
+  & img {
+    width: 40px;
+    margin-right: 20px;
+    @include lg {
+      width: 20px;
+      margin-right: 10px;
+    }
+    @include md {
+      margin-right: 7px;
+    }
+  }
+  & li:hover {
+    color: $color-hover;
+    filter: invert(52%) sepia(92%) saturate(615%) hue-rotate(2deg)
+      brightness(107%) contrast(104%);
+  }
+}
+// facebook ig line
+.footer__nav__community {
+  & li {
+    margin-left: 32px;
+    @include lg {
+      margin-left: 24px;
+    }
+  }
+  &--img,
+  &--imgfb {
+    width: 48px;
+    @include lg {
+      width: 24px;
+    }
+    &:hover {
+      filter: invert(52%) sepia(92%) saturate(615%) hue-rotate(2deg)
+        brightness(107%) contrast(104%);
+    }
+  }
+  &--imgfb {
+    filter: invert(100%);
+    border-radius: 20px;
+    width: 40px;
+    @include lg {
+      width: 20px;
+    }
+  }
+}
+//
+.footer__nav__copyright {
+  & p {
+    @include md {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    font-size: 14px;
+    & li {
+      margin-left: 48px;
+      @include lg {
+        margin-left: 24px;
+      }
+      @include md {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+      }
+    }
+    & a:hover {
+      color: $color-hover;
+    }
+  }
+}
