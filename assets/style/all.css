@@ -1151,7 +1151,9 @@ body {
       height: 20px;
       margin-right: 10px; }
     .store__item--adress {
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      margin-left: 32px;
+      text-indent: -32px; }
       .store__item--adress::before {
         content: "";
         background: url("../images/icon-map.svg") no-repeat center center/contain;
@@ -1222,7 +1224,10 @@ body {
         .faq__item--title {
           margin-bottom: 8px; } }
     .faq__item--content {
-      margin-left: 45px; }
+      margin-left: 90px; }
+      @media (max-width: 992px) {
+        .faq__item--content {
+          margin-left: 70px; } }
       @media (max-width: 768px) {
         .faq__item--content {
           margin-left: 0; } }
