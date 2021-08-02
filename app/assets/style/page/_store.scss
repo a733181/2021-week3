@@ -102,6 +102,8 @@
     }
     &--adress {
       margin-bottom: 16px;
+      margin-left: 32px;
+      text-indent: -32px;
       &::before {
         content: "";
         background: url("../images/icon-map.svg") no-repeat center
