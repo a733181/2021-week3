@@ -23,12 +23,12 @@
       @include px(14px, 22px);
     }
     @include md {
-      width: 115px;
+      width: 200px;
       font-size: 14px;
       @include px(6px, 14px);
     }
-    @media (max-width: 320px) {
-      width: 100px;
+    @media (max-width: 500px) {
+      width: 120px;
       font-size: 12px;
     }
   }

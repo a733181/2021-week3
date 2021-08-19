@@ -28,7 +28,7 @@
   @include md {
     display: none;
   }
-  & li {
+  li {
     margin-right: 48px;
     margin-bottom: 36px;
     @include lg {
@@ -52,7 +52,7 @@
       margin-bottom: 6px;
     }
   }
-  & img {
+  img {
     width: 40px;
     margin-right: 20px;
     @include lg {
@@ -63,7 +63,7 @@
       margin-right: 7px;
     }
   }
-  & li:hover {
+  li:hover {
     color: $color-hover;
     filter: invert(52%) sepia(92%) saturate(615%) hue-rotate(2deg)
       brightness(107%) contrast(104%);
@@ -71,7 +71,7 @@
 }
 // facebook ig line
 .footer__nav__community {
-  & li {
+  li {
     margin-left: 32px;
     @include lg {
       margin-left: 24px;
@@ -99,7 +99,7 @@
 }
 //
 .footer__nav__copyright {
-  & p {
+  p {
     @include md {
       width: 100%;
     }
@@ -107,7 +107,7 @@
 
   &__content {
     font-size: 14px;
-    & li {
+    li {
       margin-left: 48px;
       @include lg {
         margin-left: 24px;
@@ -118,7 +118,7 @@
         margin-top: 8px;
       }
     }
-    & a:hover {
+    a:hover {
       color: $color-hover;
     }
   }

@@ -1,6 +1,11 @@
 .banner {
-  background: url(../images/banner.png) no-repeat center center/cover;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/banner.png);
   height: 637px;
+  @include md {
+    background-image: url(../images/banner-sm.png);
+  }
   &__content {
     height: 100%;
     color: $color-primarydark;
@@ -41,7 +46,7 @@
       margin-bottom: 28px;
     }
   }
-  & img {
+  img {
     width: 100px;
     height: 100px;
     margin-bottom: 25px;
@@ -118,7 +123,7 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-    & img {
+    img {
       margin-right: 10px;
       width: 44px;
     }
@@ -161,7 +166,7 @@
     @include md {
       margin-bottom: 16px;
     }
-    & img {
+    img {
       width: 100%;
     }
     &::before {
@@ -216,10 +221,11 @@
     @include md {
       margin-bottom: 16px;
     }
-    & img {
+    img {
       width: 100%;
     }
-    & p {
+    p,
+    h3 {
       @include my(16px, 16px);
     }
     &--name {
@@ -262,7 +268,8 @@
 }
 .contactUs__form__group {
   margin-bottom: 16px;
-  & input,
+  width: 730px;
+  input,
   textarea {
     display: block;
     width: 100%;
@@ -273,13 +280,13 @@
   }
   &__checkbox {
     margin-bottom: 40px;
-    & input {
+    input {
       margin-right: 8px;
     }
   }
   &__submit {
     padding-bottom: 20px;
-    & input {
+    input {
       color: $color-white;
       background-color: $color-primary;
       width: 350px;

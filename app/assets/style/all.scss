@@ -1,19 +1,20 @@
-@import "config/variables";
+@import "utils/variables";
 
 @import "base/reset";
 @import "base/base";
 
-@import "config/mixins";
-@import "config/grid";
-@import "utilities/utilities";
+@import "utils/mixins";
+@import "components/grid";
 
-@import "help/help";
+@import "utils/utilities";
+
+@import "utils/help";
 
 @import "layout/header";
 @import "layout/footer";
 
 @import "page/index";
-@import "page/glasse.scss";
+@import "page/glasse";
 @import "page/store";
 @import "page/faq";
 @import "page/blog";
