@@ -915,15 +915,25 @@ body {
         font-size: 32px; } }
   .contactUs--content {
     font-size: 20px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    max-width: 730px;
+    margin-right: auto;
+    margin-left: auto; }
+    @media (max-width: 992px) {
+      .contactUs--content {
+        max-width: 450px; } }
 
-@media (max-width: 768px) {
-  .contactUs__form {
-    font-size: 14px; } }
+.contactUs__form {
+  width: 730px; }
+  @media (max-width: 992px) {
+    .contactUs__form {
+      width: 450px; } }
+  @media (max-width: 768px) {
+    .contactUs__form {
+      font-size: 14px; } }
 
 .contactUs__form__group {
-  margin-bottom: 16px;
-  width: 730px; }
+  margin-bottom: 16px; }
   .contactUs__form__group input,
   .contactUs__form__group textarea {
     display: block;
@@ -941,7 +951,6 @@ body {
     .contactUs__form__group__submit input {
       color: white;
       background-color: #aa0601;
-      width: 350px;
       padding: 16px 143px;
       border: none;
       -webkit-transition-duration: 1000ms;
