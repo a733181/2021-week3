@@ -259,16 +259,24 @@
   &--content {
     font-size: 20px;
     margin-bottom: 20px;
+    max-width: 730px;
+    @include my(auto, auto);
+    @include lg {
+      max-width: 450px;
+    }
   }
 }
 .contactUs__form {
+  width: 730px;
+  @include lg {
+    width: 450px;
+  }
   @include md {
     font-size: 14px;
   }
 }
 .contactUs__form__group {
   margin-bottom: 16px;
-  width: 730px;
   input,
   textarea {
     display: block;
@@ -289,7 +297,6 @@
     input {
       color: $color-white;
       background-color: $color-primary;
-      width: 350px;
       padding: 16px 143px;
       border: none;
       transition-duration: 1000ms;
